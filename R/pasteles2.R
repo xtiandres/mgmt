@@ -69,9 +69,9 @@ pie224 <- ggplot(dat224, aes(x = " ", y = porcentaje, fill = x)) +
         panel.background = element_rect(fill = "#ebf2ff"),
         plot.background = element_rect(fill = "#ebf2ff"),
         legend.background = element_rect(fill = "#ebf2ff"),
-        legend.position = 'bottom')
-pie224 + labs(title = 'Pregunta 4 - 2022',
-            subtitle = 'Considera adecuado el tiempo en la parte teória y de práctica')
+        legend.position = 'bottom') +
+  labs(title = 'Pregunta 4 - 2022',
+       subtitle = 'Considera adecuado el tiempo en la parte teória y de práctica')
 
 # Pie Chart - Pregunta 10 - GGPLOT OK
 pie2210 <- ggplot(dat2210, aes(x = " ", y = porcentaje, fill = x)) +
@@ -88,9 +88,9 @@ pie2210 <- ggplot(dat2210, aes(x = " ", y = porcentaje, fill = x)) +
         panel.background = element_rect(fill = "#ebf2ff"),
         plot.background = element_rect(fill = "#ebf2ff"),
         legend.background = element_rect(fill = "#ebf2ff"),
-        legend.position = 'bottom')
-pie2210 + labs(title = 'Pregunta 10 - 2022',
-            subtitle = 'Se siente en la capacidad de realizar de manera adecuada la toma de sangre arterial posterior a la práctica de laboratorio in vivo')
+        legend.position = 'bottom') +
+  labs(title = 'Pregunta 10 - 2022',
+       subtitle = 'Se siente en la capacidad de realizar de manera adecuada la toma de sangre arterial posterior a la práctica de laboratorio in vivo')
 
 # Pie Chart - Pregunta 11 - GGPLOT OK
 pie2211 <- ggplot(dat2211, aes(x = " ", y = porcentaje, fill = x)) +
@@ -107,9 +107,9 @@ pie2211 <- ggplot(dat2211, aes(x = " ", y = porcentaje, fill = x)) +
         panel.background = element_rect(fill = "#ebf2ff"),
         plot.background = element_rect(fill = "#ebf2ff"),
         legend.background = element_rect(fill = "#ebf2ff"),
-        legend.position = 'bottom')
-pie2211 + labs(title = 'Pregunta 11 - 2022',
-            subtitle = 'Se siente en la capacidad de interpretar las normas generales de bioseguridad posterior a la práctica de laboratorio con fantomas de simulación')
+        legend.position = 'bottom') +
+  labs(title = 'Pregunta 11 - 2022',
+       subtitle = 'Se siente en la capacidad de interpretar las normas generales de bioseguridad posterior a la práctica de laboratorio con fantomas de simulación')
 
 # Pie Chart - Pregunta 13 - GGPLOT OK
 pie2213 <- ggplot(dat2213, aes(x = " ", y = porcentaje, fill = x)) +
@@ -126,9 +126,9 @@ pie2213 <- ggplot(dat2213, aes(x = " ", y = porcentaje, fill = x)) +
         panel.background = element_rect(fill = "#ebf2ff"),
         plot.background = element_rect(fill = "#ebf2ff"),
         legend.background = element_rect(fill = "#ebf2ff"),
-        legend.position = 'bottom')
-pie2213 + labs(title = 'Pregunta 13 - 2022',
-            subtitle = 'Se siente en la capacidad de interpretar tiempos de coagulación, INR, importancia de antiagregantes plaquetarios y anticoagulantes posterior a la práctica de laboratorio con fantomas de simulación')
+        legend.position = 'bottom') +
+  labs(title = 'Pregunta 13 - 2022',
+       subtitle = 'Se siente en la capacidad de interpretar tiempos de coagulación, INR, importancia de antiagregantes plaquetarios y anticoagulantes posterior a la práctica de laboratorio con fantomas de simulación')
 
 # Pie Chart - Pregunta 17 - GGPLOT OK
 pie2217 <- ggplot(dat2217, aes(x = " ", y = porcentaje, fill = x)) +
@@ -145,9 +145,9 @@ pie2217 <- ggplot(dat2217, aes(x = " ", y = porcentaje, fill = x)) +
         panel.background = element_rect(fill = "#ebf2ff"),
         plot.background = element_rect(fill = "#ebf2ff"),
         legend.background = element_rect(fill = "#ebf2ff"),
-        legend.position = 'bottom')
-pie2217 + labs(title = 'Pregunta 17 - 2022',
-             subtitle = 'El tutor fue una guía para usted durante la clase práctica')
+        legend.position = 'bottom') +
+  labs(title = 'Pregunta 17 - 2022',
+       subtitle = 'El tutor fue una guía para usted durante la clase práctica')
 
 ggsave(pie224, filename = '/home/xut/Documents/udaviz/R/studio/mgmt/data/pie224.png', width = 8, height = 6)
 ggsave(pie2210, filename = '/home/xut/Documents/udaviz/R/studio/mgmt/data/pie2210.png', width = 8, height = 6)

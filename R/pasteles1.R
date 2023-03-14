@@ -80,9 +80,9 @@ pie1 <- ggplot(dat1, aes(x = " ", y = porcentaje, fill = x)) +
         panel.background = element_rect(fill = "#ebf2ff"),
         plot.background = element_rect(fill = "#ebf2ff"),
         legend.background = element_rect(fill = "#ebf2ff"),
-        legend.position = 'bottom')
-pie1 + labs(title = 'Pregunta 1',
-            subtitle = 'Considera adecuado el tiempo en la parte teorica y de practica')
+        legend.position = 'bottom') +
+  labs(title = 'Pregunta 1 - 2021',
+       subtitle = 'Considera adecuado el tiempo en la parte teorica y de practica')
 
 # Pie Chart - Pregunta 3 - GGPLOT OK
 pie3 <- ggplot(dat3, aes(x = " ", y = porcentaje, fill = x)) +
@@ -99,9 +99,9 @@ pie3 <- ggplot(dat3, aes(x = " ", y = porcentaje, fill = x)) +
         panel.background = element_rect(fill = "#ebf2ff"),
         plot.background = element_rect(fill = "#ebf2ff"),
         legend.background = element_rect(fill = "#ebf2ff"),
-        legend.position = 'bottom')
-pie3 + labs(title = 'Pregunta 3',
-            subtitle = 'Se siente en capacidad de realizar una adecuada toma de sangre venosa con jeringuilla posterior al laboratorio')
+        legend.position = 'bottom') +
+  labs(title = 'Pregunta 3 - 2021',
+       subtitle = 'Se siente en capacidad de realizar una adecuada toma de sangre venosa con jeringuilla posterior al laboratorio')
 
 # Pie Chart - Pregunta 4 - GGPLOT OK
 pie4 <- ggplot(dat4, aes(x = " ", y = porcentaje, fill = x)) +
@@ -118,9 +118,9 @@ pie4 <- ggplot(dat4, aes(x = " ", y = porcentaje, fill = x)) +
         panel.background = element_rect(fill = "#ebf2ff"),
         plot.background = element_rect(fill = "#ebf2ff"),
         legend.background = element_rect(fill = "#ebf2ff"),
-        legend.position = 'bottom')
-pie4 + labs(title = 'Pregunta 4',
-            subtitle = 'Se siente en capacidad de realizar una adecuada toma de sangre venosa con vacutainer posterior al laboratorio')
+        legend.position = 'bottom') +
+  labs(title = 'Pregunta 4 - 2021',
+       subtitle = 'Se siente en capacidad de realizar una adecuada toma de sangre venosa con vacutainer posterior al laboratorio')
 
 # Pie Chart - Pregunta 5 - GGPLOT OK
 pie5 <- ggplot(dat5, aes(x = " ", y = porcentaje, fill = x)) +
@@ -137,9 +137,9 @@ pie5 <- ggplot(dat5, aes(x = " ", y = porcentaje, fill = x)) +
         panel.background = element_rect(fill = "#ebf2ff"),
         plot.background = element_rect(fill = "#ebf2ff"),
         legend.background = element_rect(fill = "#ebf2ff"),
-        legend.position = 'bottom')
-pie5 + labs(title = 'Pregunta 5',
-            subtitle = 'Se siente en capacidad de realizar de manera adecuada la toma de sangre arterial posterior al laboratorio')
+        legend.position = 'bottom') +
+  labs(title = 'Pregunta 5 - 2021',
+       subtitle = 'Se siente en capacidad de realizar de manera adecuada la toma de sangre arterial posterior al laboratorio')
 
 # Pie Chart - Pregunta 12 - GGPLOT OK
 pie12 <- ggplot(dat12, aes(x = " ", y = porcentaje, fill = x)) +
@@ -156,9 +156,9 @@ pie12 <- ggplot(dat12, aes(x = " ", y = porcentaje, fill = x)) +
         panel.background = element_rect(fill = "#ebf2ff"),
         plot.background = element_rect(fill = "#ebf2ff"),
         legend.background = element_rect(fill = "#ebf2ff"),
-        legend.position = 'bottom')
-pie12 + labs(title = 'Pregunta 12',
-            subtitle = 'El tutor fue una guia para usted durante la clase practica')
+        legend.position = 'bottom') +
+  labs(title = 'Pregunta 12 - 2021',
+       subtitle = 'El tutor fue una guia para usted durante la clase practica')
 
 ggsave(pie1, filename = '/home/xut/Documents/udaviz/R/studio/mgmt/data/pie1.png', width = 8, height = 6)
 ggsave(pie3, filename = '/home/xut/Documents/udaviz/R/studio/mgmt/data/pie3.png', width = 8, height = 6)
