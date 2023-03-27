@@ -134,7 +134,8 @@ pie2213 <- ggplot(dat2213, aes(x = " ", y = porcentaje, fill = x)) +
 pie2217 <- ggplot(dat2217, aes(x = " ", y = porcentaje, fill = x)) +
   geom_col(color = 'black') +
   geom_text(aes(label = scales::percent(dat2217$porcentaje)),
-            position = position_stack(vjust = .5)) +
+            position = position_stack(vjust = .5),
+            check_overlap = TRUE) +
   coord_polar(theta = 'y') +
   guides(fill = guide_legend(title = 'Escala')) +
   scale_fill_brewer(palette = 10) +

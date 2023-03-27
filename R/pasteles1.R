@@ -69,7 +69,10 @@ dat12 <- mutate(dat12, porcentaje = dat12$freq / sum(dat12$freq))
 pie1 <- ggplot(dat1, aes(x = " ", y = porcentaje, fill = x)) +
   geom_col(color = 'black') +
   geom_text(aes(label = scales::percent(dat1$porcentaje)),
-            position = position_stack(vjust = .5)) +
+            position = position_stack(vjust = .5),
+            #position = position_dodge(-.9),
+            check_overlap = TRUE,
+            size = dat1$freq/10) +
   coord_polar(theta = 'y') +
   guides(fill = guide_legend(title = 'Escala')) +
   scale_fill_brewer(palette = 10) +
@@ -88,7 +91,8 @@ pie1 <- ggplot(dat1, aes(x = " ", y = porcentaje, fill = x)) +
 pie3 <- ggplot(dat3, aes(x = " ", y = porcentaje, fill = x)) +
   geom_col(color = 'black') +
   geom_text(aes(label = scales::percent(dat3$porcentaje)),
-            position = position_stack(vjust = .5)) +
+            position = position_stack(vjust = .5),
+            check_overlap = TRUE) +
   coord_polar(theta = 'y') +
   guides(fill = guide_legend(title = 'Escala')) +
   scale_fill_brewer(palette = 10) +
