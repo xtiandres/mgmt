@@ -19,6 +19,7 @@ library(EpiEstim)
 library(lessR)
 library(plotrix)
 library(scales)
+library(ggrepel)
 
 # DATASETS
 #encsat21_1 <- read_excel("/home/xut/Documents/udaviz/R/studio/mgmt/data/Encuesta de satisfacción in vivo  2021-2022.xlsx")
@@ -76,7 +77,7 @@ pie224 <- ggplot(dat224, aes(x = " ", y = porcentaje, fill = x)) +
 # Pie Chart - Pregunta 10 - GGPLOT OK
 pie2210 <- ggplot(dat2210, aes(x = " ", y = porcentaje, fill = x)) +
   geom_col(color = 'black') +
-  geom_text(aes(label = scales::percent(dat2210$porcentaje)),
+  geom_text_repel(aes(label = scales::percent(dat2210$porcentaje)),
             position = position_stack(vjust = .5)) +
   coord_polar(theta = 'y') +
   guides(fill = guide_legend(title = 'Escala')) +
