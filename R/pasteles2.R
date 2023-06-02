@@ -58,8 +58,8 @@ dat2217 <- mutate(dat2217, porcentaje = dat2217$freq / sum(dat2217$freq))
 # Pie Chart - Pregunta 4 - GGPLOT OK
 pie224 <- ggplot(dat224, aes(x = " ", y = porcentaje, fill = x)) +
   geom_col(color = 'black') +
-  geom_text(aes(label = scales::percent(dat224$porcentaje)),
-            position = position_stack(vjust = .5)) +
+  geom_text_repel(aes(label = scales::percent(dat224$porcentaje)),
+                  position = position_stack(vjust = .5)) +
   coord_polar(theta = 'y') +
   guides(fill = guide_legend(title = 'Escala')) +
   scale_fill_brewer(palette = 10) +
@@ -78,7 +78,7 @@ pie224 <- ggplot(dat224, aes(x = " ", y = porcentaje, fill = x)) +
 pie2210 <- ggplot(dat2210, aes(x = " ", y = porcentaje, fill = x)) +
   geom_col(color = 'black') +
   geom_text_repel(aes(label = scales::percent(dat2210$porcentaje)),
-            position = position_stack(vjust = .5)) +
+                  position = position_stack(vjust = .5)) +
   coord_polar(theta = 'y') +
   guides(fill = guide_legend(title = 'Escala')) +
   scale_fill_brewer(palette = 10) +
@@ -91,13 +91,13 @@ pie2210 <- ggplot(dat2210, aes(x = " ", y = porcentaje, fill = x)) +
         legend.background = element_rect(fill = "#ebf2ff"),
         legend.position = 'bottom') +
   labs(title = 'Pregunta 10 - 2022',
-       subtitle = 'Se siente en la capacidad de realizar de manera adecuada la toma de sangre arterial posterior a la práctica de laboratorio in vivo')
+       subtitle = 'Se siente en la capacidad de realizar de manera adecuada la toma \nde sangre arterial posterior a la práctica de laboratorio in vivo', size=3)
 
 # Pie Chart - Pregunta 11 - GGPLOT OK
 pie2211 <- ggplot(dat2211, aes(x = " ", y = porcentaje, fill = x)) +
   geom_col(color = 'black') +
-  geom_text(aes(label = scales::percent(dat2211$porcentaje)),
-            position = position_stack(vjust = .5)) +
+  geom_text_repel(aes(label = scales::percent(dat2211$porcentaje)),
+                  position = position_stack(vjust = .5)) +
   coord_polar(theta = 'y') +
   guides(fill = guide_legend(title = 'Escala')) +
   scale_fill_brewer(palette = 10) +
@@ -110,13 +110,13 @@ pie2211 <- ggplot(dat2211, aes(x = " ", y = porcentaje, fill = x)) +
         legend.background = element_rect(fill = "#ebf2ff"),
         legend.position = 'bottom') +
   labs(title = 'Pregunta 11 - 2022',
-       subtitle = 'Se siente en la capacidad de interpretar las normas generales de bioseguridad posterior a la práctica de laboratorio con fantomas de simulación')
+       subtitle = 'Se siente en la capacidad de interpretar las normas generales de bioseguridad \nposterior a la práctica de laboratorio con fantomas de simulación')
 
 # Pie Chart - Pregunta 13 - GGPLOT OK
 pie2213 <- ggplot(dat2213, aes(x = " ", y = porcentaje, fill = x)) +
   geom_col(color = 'black') +
-  geom_text(aes(label = scales::percent(dat2213$porcentaje)),
-            position = position_stack(vjust = .5)) +
+  geom_text_repel(aes(label = scales::percent(dat2213$porcentaje)),
+                  position = position_stack(vjust = .5)) +
   coord_polar(theta = 'y') +
   guides(fill = guide_legend(title = 'Escala')) +
   scale_fill_brewer(palette = 10) +
@@ -129,14 +129,13 @@ pie2213 <- ggplot(dat2213, aes(x = " ", y = porcentaje, fill = x)) +
         legend.background = element_rect(fill = "#ebf2ff"),
         legend.position = 'bottom') +
   labs(title = 'Pregunta 13 - 2022',
-       subtitle = 'Se siente en la capacidad de interpretar tiempos de coagulación, INR, importancia de antiagregantes plaquetarios y anticoagulantes posterior a la práctica de laboratorio con fantomas de simulación')
+       subtitle = 'Se siente en la capacidad de interpretar tiempos de coagulación, \nINR, importancia de antiagregantes plaquetarios y anticoagulantes \nposterior a la práctica de laboratorio con fantomas de simulación')
 
 # Pie Chart - Pregunta 17 - GGPLOT OK
 pie2217 <- ggplot(dat2217, aes(x = " ", y = porcentaje, fill = x)) +
   geom_col(color = 'black') +
-  geom_text(aes(label = scales::percent(dat2217$porcentaje)),
-            position = position_stack(vjust = .5),
-            check_overlap = TRUE) +
+  geom_text_repel(aes(label = scales::percent(dat2217$porcentaje)),
+                  position = position_stack(vjust = .5)) +
   coord_polar(theta = 'y') +
   guides(fill = guide_legend(title = 'Escala')) +
   scale_fill_brewer(palette = 10) +
