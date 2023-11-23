@@ -21,6 +21,7 @@ library(plotrix)
 library(scales)
 library(ggrepel)
 library(plotly)
+library(webshot)
 
 # DATASETS
 encsat22_1 <- read_excel("/home/xut/Documents/udaviz/R/studio/mgmt/data/Encuesta de satisfacción simulación 2022-2022.xlsx")
@@ -143,10 +144,14 @@ f17 <- plot_ly(dat2217, labels = ~x, values = ~porcentaje, type = 'pie',
                              line = list(color = '#FFFFFF', width = 1)),
                #The 'pull' attribute can also be used to create space between the sectors
                showlegend = FALSE)
-f17 <- f17 %>% layout(title = 'P17: El tutor fue una guía para usted durante la clase práctica',
-                      xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
-                      yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+#f17 <- f17 %>% layout(title = 'P17: El tutor fue una guía para usted durante la clase práctica',
+#                      xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+#                      yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
 
 f17
 
-dev.off()
+# Para que funcione webshot, openssl updated
+Sys.setenv(OPENSSL_CONF="/dev/null")
+export(f17, file = 'test.png')
+
+#dev.off()
