@@ -21,7 +21,7 @@ library(plotrix)
 library(scales)
 
 # DATASETS
-tabla1 <- read_excel("/home/xut/Documents/udaviz/R/studio/mgmt/data/Control y Estudio TOTAL 31 julio 2023 Final.xlsx")
+tabla1 <- read_excel("/bkpfcm/cacp/udaviz/R/studio/mgmt/data/Control y Estudio TOTAL 31 julio 2023 Final.xlsx")
 
 # MUJERES
 tmujer <- filter(tabla1,

@@ -1,11 +1,11 @@
 # PASTELES 3 - Encuesta de satisfaccion in vivo 2022-2022 - Mejorados
 
 # LIBRERIAS
-library(dplyr)
-library(tidyr)
-library(plyr)
 library(readr)
 library(readxl)
+library(plyr)
+library(dplyr)
+library(tidyr)
 library(ggplot2)
 library(vcd)
 library(ggridges)
@@ -24,7 +24,7 @@ library(plotly)
 library(webshot)
 
 # DATASETS
-encsat22_1 <- read_excel("/home/xut/Documents/udaviz/R/studio/mgmt/data/Encuesta de satisfacción simulación 2022-2022.xlsx")
+encsat22_1 <- read_excel("/bkpfcm/cacp/udaviz/R/studio/mgmt/data/Encuesta de satisfacción simulación 2022-2022.xlsx")
 
 # CLEANING
 es22_1c <- select(encsat22_1,
