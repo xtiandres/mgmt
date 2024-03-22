@@ -24,7 +24,8 @@ library(plotly)
 library(webshot)
 
 # DATASETS
-bdcos <- read_excel("/home/xut/Documents/udaviz/R/studio/mgmt/data/BASE DE DATOS DE TRABAJO COCEDE CEDULAS.xlsx")
+#bdcos <- read_excel("/home/xut/Documents/udaviz/R/studio/mgmt/data/BASE DE DATOS DE TRABAJO COCEDE CEDULAS.xlsx")
+bdcos <- read_excel("/home/xut/Documents/udaviz/R/studio/mgmt/data/busqueda.xlsx", sheet = 3)
 
 # INTERSECT
 soluc <- intersect(bdcos$`CEDULAS COCEDE`, bdcos$`CEDULAS CERTIFICADOS DE APORTACION COOPERATIVA`)
